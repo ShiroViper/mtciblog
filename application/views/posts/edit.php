@@ -14,5 +14,13 @@
     <label >Body</label>
     <textarea name="body" id="editor1" cols="30" rows="10"> <?php echo $post['body'] ?></textarea>
   </div>
+  <div class="form-group">
+    <label for="">Categories</label>
+    <select name="category_id" id="" class="form-control">
+      <?php foreach($categories as $category): ?>
+        <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
